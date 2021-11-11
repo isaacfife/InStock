@@ -4,21 +4,9 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('Check Stock and Notify') {
             steps {
-                sh 'python --version'
-                sh 'pip --version'
-                sh 'pip list'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying..'
+                sh 'python main.py'
             }
         }
     }
