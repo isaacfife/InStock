@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'python:3.10-slim' }
+        docker { image 'isaacfife/python-selenium-gecko:latest' }
     }
 
     stages {
