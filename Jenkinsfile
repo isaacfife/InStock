@@ -3,8 +3,8 @@ pipeline {
         docker { image 'isaacfife/python-selenium-gecko:latest' }
     }
     environment {
-        PUSHOVER_API_TOKEN = credentials(params.PUSHOVER_API_TOKEN_CREDS_ID)
-        PUSHOVER_USER_TOKEN = credentials(params.PUSHOVER_USER_TOKEN_CREDS_ID)
+        PUSHOVER_API_TOKEN = credentials('pushover-api-token-creds-id')
+        PUSHOVER_USER_TOKEN = credentials('pushover-user-token-creds-id')
     }
     stages {
         stage('Check Stock and Notify') {
