@@ -7,6 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'python --version'
+                sh 'pip --version'
+                sh 'pip list'
             }
         }
         stage('Test') {
