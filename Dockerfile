@@ -7,4 +7,4 @@ ADD https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver
 RUN tar -xf /tmp/geckodriver-v0.30.0-linux64.tar.gz -C /usr/local/bin/
 RUN rm /tmp/geckodriver-v0.30.0-linux64.tar.gz
 RUN chmod +x /usr/local/bin/geckodriver
-RUN install -d -m 0755 -o www-data -g www-data /.cache/dconf/user
+RUN install -d -m 0755 /.cache/dconf/user
